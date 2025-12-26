@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitHub Wrapped 🎁
 
-## Getting Started
+A cinematic, shareable **GitHub Wrapped experience** that turns your yearly GitHub activity into a beautiful, story-driven recap — inspired by Spotify Wrapped.
 
-First, run the development server:
+Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🔐 **GitHub OAuth login**
+- 📊 Yearly GitHub activity summary
+- 🧮 Total contributions, commits, PRs, issues
+- 📦 Top repositories by contribution count
+- 🗣️ Top programming languages (with percentages)
+- 🔥 Best month & most active weekday
+- 🏆 Fun “developer vibe” badge (e.g. *Commit Captain*)
+- 🎞️ Slide-based wrapped experience (click to navigate)
+- 📄 Final **all-in-one summary page** for sharing
+- 🔗 Shareable public wrapped links
+- ⬇️ Downloadable summary image
+- 🗄️ Persistent storage using PostgreSQL + Prisma
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧠 How it works (High level)
 
-To learn more about Next.js, take a look at the following resources:
+1. User logs in with GitHub OAuth
+2. App fetches GitHub activity using GitHub API
+3. Data is processed into a yearly “wrapped” object
+4. Wrapped data is saved in the database
+5. User views the wrapped as a slide-based story
+6. Final summary page allows sharing/downloading
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧱 Tech Stack
 
-## Deploy on Vercel
+- **Frontend:** Next.js 14 (App Router), React, TypeScript
+- **Styling:** Tailwind CSS
+- **Backend:** Next.js API routes
+- **Auth:** GitHub OAuth
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **Deployment:** Vercel (recommended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
+
+github-wrapped/
+├── prisma/
+│ ├── schema.prisma
+│ └── migrations/
+├── public/
+├── src/
+│ ├── app/
+│ │ ├── api/
+│ │ │ ├── auth/
+│ │ │ ├── wrapped/
+│ │ │ │ ├── generate/
+│ │ │ │ └── [id]/
+│ │ ├── w/
+│ │ │ └── [id]/
+│ │ └── page.tsx
+│ ├── lib/
+│ │ ├── auth.ts
+│ │ ├── db.ts
+│ │ └── wrapped.ts
+│ └── components/
+├── .env.example
+├── package.json
+└── README.md
+
+---
+
+## 🔑 Setting up GitHub OAuth
+
+1. Go to GitHub → Settings → Developer settings → OAuth Apps
+
+2. Create a new OAuth App
+
+3. Set:
+
+   - Homepage URL: http://localhost:3000
+
+   - Authorization callback URL:
+
+        http://localhost:3000/api/auth/callback/github
+
+
+4. Copy Client ID & Client Secret
+
+5. Add them to .env.local
+
+--
+
+## 🗄️ Database Setup (Prisma)
+
+1.  Install dependencies
+> npm install
+2.  Generate Prisma client
+> npx prisma generate
+3.  Run migrations
+> npx prisma migrate dev
+
+--
+
+## ▶️ Running the App Locally
+
+> npm run dev
+
+Then open:
+
+> http://localhost:3000
+
+After login, generate your wrapped and view it instantly.
+
+--
+
+## 🙌 Credits
+
+Built with ❤️ by Sai Siri Chittineni
+
+If this inspired you, ⭐ the repo!
