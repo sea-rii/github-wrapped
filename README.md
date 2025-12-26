@@ -21,6 +21,17 @@ Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 - 🗄️ Persistent storage using PostgreSQL + Prisma
 
 
+## 📸 Screenshots
+
+### 🎞️ Wrapped
+![Wrapped](public/screenshots/wrapped.png)
+
+### 🏆 Top Repositories
+![Top Repositories](public/screenshots/project.png)
+
+### 🎞️ Final Shareable Summary
+![Final Summary](public/screenshots/summary.png)
+
 
 ## 🧠 How it works (High level)
 
