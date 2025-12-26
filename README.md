@@ -54,7 +54,7 @@ Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 - **ORM:** Prisma
 - **Deployment:** Vercel 
 
----
+
 
 ## 📁 Project Structure
 
