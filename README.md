@@ -64,6 +64,7 @@ github-wrapped/
 │ ├── schema.prisma
 │ └── migrations/
 ├── public/
+│ ├── screenshots/
 ├── src/
 │ ├── app/
 │ │ ├── api/
