@@ -4,11 +4,10 @@ A cinematic, shareable **GitHub Wrapped experience** that turns your yearly GitH
 
 Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 
----
 
 ## ✨ Features
 
-- 🔐 **GitHub OAuth login**
+- 🔐 GitHub OAuth login
 - 📊 Yearly GitHub activity summary
 - 🧮 Total contributions, commits, PRs, issues
 - 📦 Top repositories by contribution count
@@ -16,12 +15,12 @@ Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 - 🔥 Best month & most active weekday
 - 🏆 Fun “developer vibe” badge (e.g. *Commit Captain*)
 - 🎞️ Slide-based wrapped experience (click to navigate)
-- 📄 Final **all-in-one summary page** for sharing
+- 📄 Final all-in-one summary page for sharing
 - 🔗 Shareable public wrapped links
 - ⬇️ Downloadable summary image
 - 🗄️ Persistent storage using PostgreSQL + Prisma
 
----
+
 
 ## 🧠 How it works (High level)
 
@@ -32,7 +31,7 @@ Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 5. User views the wrapped as a slide-based story
 6. Final summary page allows sharing/downloading
 
----
+
 
 ## 🧱 Tech Stack
 
@@ -42,12 +41,13 @@ Built with **Next.js 14**, **TypeScript**, **Prisma**, and **GitHub OAuth**.
 - **Auth:** GitHub OAuth
 - **Database:** PostgreSQL
 - **ORM:** Prisma
-- **Deployment:** Vercel (recommended)
+- **Deployment:** Vercel 
 
 ---
 
 ## 📁 Project Structure
 
+```text
 github-wrapped/
 ├── prisma/
 │ ├── schema.prisma
@@ -72,51 +72,40 @@ github-wrapped/
 ├── package.json
 └── README.md
 
----
 
 ## 🔑 Setting up GitHub OAuth
 
 1. Go to GitHub → Settings → Developer settings → OAuth Apps
-
 2. Create a new OAuth App
-
 3. Set:
 
    - Homepage URL: http://localhost:3000
-
    - Authorization callback URL:
-
         http://localhost:3000/api/auth/callback/github
 
-
 4. Copy Client ID & Client Secret
-
 5. Add them to .env.local
 
---
 
 ## 🗄️ Database Setup (Prisma)
 
 1.  Install dependencies
-> npm install
+    > npm install
 2.  Generate Prisma client
-> npx prisma generate
+    > npx prisma generate
 3.  Run migrations
-> npx prisma migrate dev
+    > npx prisma migrate dev
 
---
 
 ## ▶️ Running the App Locally
 
 > npm run dev
 
 Then open:
-
 > http://localhost:3000
 
 After login, generate your wrapped and view it instantly.
 
---
 
 ## 🙌 Credits
 
