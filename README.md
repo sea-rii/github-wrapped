@@ -120,6 +120,11 @@ Then open:
 After login, generate your wrapped and view it instantly.
 
 
+## 📜 Blog 
+
+> https://medium.com/@saisirichittineni/i-built-github-wrapped-because-my-code-deserved-a-story-a7ba4c24807f
+
+
 ## 🙌 Credits
 
 Built with ❤️ by Sai Siri Chittineni
