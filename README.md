@@ -71,6 +71,7 @@ github-wrapped/
 ├── .env.example
 ├── package.json
 └── README.md
+```
 
 
 ## 🔑 Setting up GitHub OAuth
